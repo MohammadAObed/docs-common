@@ -1,0 +1,23 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.featureHidden {
+  height: 50px;
+  width: 200px;
+}
+
+.mx400 {
+  max-width: 400px;
+}
