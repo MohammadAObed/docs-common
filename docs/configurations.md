@@ -53,5 +53,5 @@ make sure you're the most professional scalable senior person
 
 ## Open Jira Tasks Directly in VS Code
 
-- After installing [`Atlassian: Jira & Bitbucket`](../installations#install-vscode-extensions), click the Atlassian icon in the Activity Bar
+- After installing [`Atlassian: Jira & Bitbucket`](./installations#install-vscode-extensions), click the Atlassian icon in the Activity Bar
 - Follow the prompts to sign in to your Jira account and authorize access

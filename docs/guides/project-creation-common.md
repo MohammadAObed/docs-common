@@ -34,7 +34,7 @@ sidebar_position: 1
 - Go to [Jira](https://moslns.atlassian.net/jira/settings/projects/manage) and log in.
 - Click **Projects → Create project**.
 - Choose a project template (e.g., Kanban)
-- Choose a name, and the key its the first letters of each word captialized
+- Choose a name, and the key its the first letters of each word capitalized
 - Choose github integration and select your repository (if it this step does not appear dont worry, keep going).
 - Follow the setup wizard if there is more.
 
@@ -60,7 +60,9 @@ sidebar_position: 1
 
 ## Reference Projects
 
-Below are links to various reference projects hosted on GitHub. Each project covers different technologies and use cases, with detailed README files explaining setup and implementation. Explore these repositories to learn how to use them as starting points for your own projects or build similar solutions.
+Below are npm packages to use in your projects the same way you use and install npm packages like lodash, react, expo, etc.., they are helpers to your projects.
+
+Below are links to various packages/projects hosted on GitHub. Each project covers different technologies and use cases, with detailed README files explaining setup and implementation. Explore these repositories to learn how to use them as starting points for your own projects or build similar solutions.
 
 - [Configuration & Development Common](https://github.com/MohammadAObed/config/blob/main/README.md)
 - [TypeScript Common](https://github.com/MohammadAObed/typescript-common/blob/main/README.md)

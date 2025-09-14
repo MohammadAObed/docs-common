@@ -21,8 +21,8 @@ const FeatureList: FeatureItem[] = [
     title: "Frontend & Backend Basics",
     description: (
       <>
-        Explore the essentials of web development — HTML, CSS, JavaScript, frameworks, APIs, and databases. A single place to build confidence in
-        both ends of the stack.
+        Explore the essentials of web & mobile development, frameworks, APIs, and databases. A single place to build confidence in both ends of
+        the stack.
       </>
     ),
   },

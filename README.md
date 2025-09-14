@@ -1,0 +1,1 @@
+Anyone working on this documentation or any other docs projects, its the only one in my git repos and projects that I want intentionally without jira or using any of the common packages I created, because in the end its just docs, static simple content that needs no scalability. Its for quick documenting, but the important thing is to organize the docs well

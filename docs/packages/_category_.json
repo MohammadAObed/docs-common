@@ -1,0 +1,10 @@
+{
+  "label": "Packages",
+  "position": 5,
+  "className": "top-divider",
+  "link": {
+    "type": "generated-index",
+    "title": "Packages",
+    "description": "Contains all npm packages to help you build better applications"
+  }
+}

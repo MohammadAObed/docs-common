@@ -1,5 +1,6 @@
 import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
+import type { PluginOptions } from "@easyops-cn/docusaurus-search-local";
 import { themes as prismThemes } from "prism-react-renderer";
 
 const ORG = "MohammadAObed";
@@ -13,18 +14,14 @@ const config: Config = {
   future: { v4: true },
   url: SITE_URL,
   baseUrl: "/",
-
   organizationName: ORG,
   projectName: REPO,
-
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   presets: [
     [
       "classic",
@@ -45,7 +42,6 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
     image: "img/social-card.png",
     navbar: {
@@ -55,8 +51,9 @@ const config: Config = {
         src: "img/logo.png",
       },
       items: [
-        { type: "docSidebar", sidebarId: "tutorialSidebar", position: "left", label: "docs" },
+        { type: "docSidebar", sidebarId: "tutorialSidebar", position: "left", label: "Docs" },
         { to: "/blog", label: "Blog", position: "left" },
+        { label: "Packages", position: "left", items: [{ to: "/docs/packages/config/get-started", label: "config" }] },
         { href: `https://github.com/${ORG}`, label: "GitHub", position: "right" },
       ],
     },
@@ -73,7 +70,10 @@ const config: Config = {
             { label: "Guides", to: "/docs/category/guides" },
           ],
         },
-
+        {
+          title: "Packages",
+          items: [{ label: "config", to: "/docs/packages/config/get-started" }],
+        },
         {
           title: "More",
           items: [
@@ -92,6 +92,14 @@ const config: Config = {
       defaultMode: "dark",
     },
   } satisfies Preset.ThemeConfig,
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+      } satisfies PluginOptions,
+    ],
+  ],
 };
 
 export default config;
