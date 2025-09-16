@@ -9,7 +9,7 @@ sidebar_position: 1
 - Go to [github.com](https://github.com/) and log in.
 - Click the **+** icon (top right) → **New repository**.
 - Enter a repository name, description, and choose visibility (public/private).
-- Add a README, (Optional) .gitignore, (Optional) license.
+- Add a (Ignore if it'll be added later) README, (Optional) .gitignore, (Optional) license.
 - Click **Create repository**.
 
 ## Clone the Repository in VS Code Using Git Bash
@@ -56,7 +56,8 @@ sidebar_position: 1
 ## Typescript
 
 - In any project you work on with typescript, open any ts file in it then do the following:
-  - first hit ctrl+shift+p → type select typescript version → select the workspace version → again hit ctrl+shift+p → type & click on restart typescript
+  - first hit ctrl+shift+p → type `select typescript version` → select the workspace version → again hit ctrl+shift+p → type & click on restart typescript
+- Any ts error you encounter that you think is not correct, just restart typescript by ctrl+shift+p → type & click on `Restart TS Server`
 
 ## Reference Projects
 
