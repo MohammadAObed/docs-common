@@ -1,9 +1,0 @@
-{
-  "label": "config",
-  "position": 1,
-  "link": {
-    "type": "generated-index",
-    "title": "config",
-    "description": "ESLint & TypeScript & Prettier & CLIs"
-  }
-}

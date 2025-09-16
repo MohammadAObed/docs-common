@@ -53,7 +53,16 @@ const config: Config = {
       items: [
         { type: "docSidebar", sidebarId: "tutorialSidebar", position: "left", label: "Docs" },
         { to: "/blog", label: "Blog", position: "left" },
-        { label: "Packages", position: "left", items: [{ to: "/docs/packages/config/get-started", label: "config" }] },
+        {
+          label: "Packages",
+          position: "left",
+          items: [
+            { to: "/docs/packages/config", label: "config" },
+            { to: "/docs/packages/typescript-common", label: "typescript-common" },
+            { to: "/docs/packages/react-common", label: "react-common" },
+            { to: "/docs/packages/reactjs-common", label: "reactjs-common" },
+          ],
+        },
         { href: `https://github.com/${ORG}`, label: "GitHub", position: "right" },
       ],
     },
@@ -72,7 +81,12 @@ const config: Config = {
         },
         {
           title: "Packages",
-          items: [{ label: "config", to: "/docs/packages/config/get-started" }],
+          items: [
+            { to: "/docs/packages/config", label: "config" },
+            { to: "/docs/packages/typescript-common", label: "typescript-common" },
+            { to: "/docs/packages/react-common", label: "react-common" },
+            { to: "/docs/packages/reactjs-common", label: "reactjs-common" },
+          ],
         },
         {
           title: "More",
