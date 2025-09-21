@@ -40,9 +40,6 @@ const FeatureList: FeatureItem[] = [
 function Feature({ title, description }: FeatureItem) {
   return (
     <div className={styles.mx400}>
-      <div className="text--center">
-        <div className={styles.featureHidden}></div>
-      </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>

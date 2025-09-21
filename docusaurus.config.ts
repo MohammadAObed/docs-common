@@ -5,7 +5,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 const ORG = "MohammadAObed";
 const REPO = "docs-common";
-const SITE_URL = "https://MohammadAObed";
+const SITE_URL = "https://mo-docs-common.netlify.app";
 
 const config: Config = {
   title: REPO,

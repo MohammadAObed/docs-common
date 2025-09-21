@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
 ---
 
-# Docs Creation & Editing - Common
+# Docs Creation
 
 Follow the installation instructions only in the official [docusaurus](https://docusaurus.io/docs/installation) docs
 
@@ -34,6 +34,7 @@ Follow the installation instructions only in the official [docusaurus](https://d
 + const ORG = "MohammadAObed"; //github org/user name
 + const REPO = "docs-common"; //github repo name
 + const SITE_URL = "https://[your-docs]"; //Site that will host the docs
++ const GITHUB_URL = `https://github.com/${ORG}/config`;
 
 const config: Config = {
   ~ title: REPO,
@@ -63,9 +64,10 @@ const config: Config = {
         ~ alt: REPO + " logo",
         ~ src: "img/logo.png",
       },
-      items: [
-        ~ { type: "docSidebar", sidebarId: "tutorialSidebar", position: "left", label: "Docs" },
-        ~ { href: `https://github.com/${ORG}`, label: "GitHub", position: "right" },
+      ~ items: [
+        //Delete all existing items, and add the following
+        + { type: "docSidebar", sidebarId: "tutorialSidebar", position: "left", label: "Docs" },
+        + { href: GITHUB_URL, label: "GitHub", position: "right" },
       ],
     },
     footer: {
@@ -80,7 +82,7 @@ const config: Config = {
           title: "More",
           items: [
             { label: "Blog", to: "/blog" },
-            { label: "GitHub", href: `https://github.com/${ORG}` },
+            { label: "GitHub", href: GITHUB_URL },
           ],
         },
       ],
@@ -165,6 +167,18 @@ notes:
 
 ### src folder
 
+#### css/custom.css
+
+- Add the following content:
+
+```css
+.top-divider {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+```
+
 #### components/HomepageFeatures/index.tsx
 
 - Replace the content of the file with the following:
@@ -203,9 +217,6 @@ const FeatureList: FeatureItem[] = [
 function Feature({ title, description }: FeatureItem) {
   return (
     <div className={styles.mx400}>
-      <div className="text--center">
-        <div className={styles.featureHidden}></div>
-      </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
@@ -232,10 +243,16 @@ export default function HomepageFeatures(): ReactNode {
 - Replace the content of the file with the following:
 
 ```css
+main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -243,6 +260,7 @@ export default function HomepageFeatures(): ReactNode {
 .feature {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   flex-wrap: wrap;
 }

@@ -8,7 +8,7 @@ Welcome to **docs-common** — your shared documentation hub for learning and pr
 
 This guide will also contain the most complete step by step guide on how to start your coding journey in web and mobile.
 
-This guide is ordered, some later sections relys on knowledge from some earlier sections.
+This guide is ordered, some later sections relies on knowledge from some earlier sections.
 
 This guide takes you **step by step**:
 

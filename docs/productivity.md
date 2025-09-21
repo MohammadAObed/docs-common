@@ -40,6 +40,8 @@ Right click on any program shortcut and select **Pin to taskbar** for easy acces
 - [Google Translate](https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en) - Quickly translate selected text
 - [Color Zilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en) - Eyedropper, color picker, gradient generator
 - [Youtube Playback Speed Control](https://chromewebstore.google.com/detail/youtube-playback-speed-co/hdannnflhlmdablckfkjpleikpphncik) - Control playback speed with shortcuts
+- [Previous Tab](https://chromewebstore.google.com/detail/previous-tab/bjaniflnlhhofabpoamhnobeonjcjjpl)
+- [QuicKey](https://chromewebstore.google.com/detail/quickey-%E2%80%93-the-quick-tab-s/ldlghkoiihaelfnggonhjnfiabmaficg) – Quick tab switcher
 
 ## Shortcuts
 
