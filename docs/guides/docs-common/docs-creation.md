@@ -4,21 +4,41 @@ sidebar_position: 1
 
 # Docs Creation
 
+## Create GitHub Repo
+
+- Follow the [clone repo step](../project-creation-common.md#clone-the-repository-in-vs-code-using-git-bash) & [connect repo](../project-creation-common.md#connect-your-github-repository)
+- But when cloning the repo, name the folder: `docs`, and you should clone the repo inside the project folder you are writing the documentation for
+
+:::info
+
+Cloning the repo inside the project you are writing the documentation for has many advantages:
+
+- Having the docs in your project folder is easier to work with
+- So you can generate [code documentation](#generate-code-documentation) with no effort
+
+:::
+
+- Just make sure you use the [config package](https://mo-docs-config.netlify.app) or:
+  - have `"exclude": ["docs"]` in your tsconfig
+  - have `ignores: ["docs", "docs/**"],` in your eslint.config
+
+## Installation
+
 Follow the installation instructions only in the official [docusaurus](https://docusaurus.io/docs/installation) docs
 
 - Make sure to select the create command with typescript
 
-## Quick Hack
+### Quick Hack
 
 - Stage the changes of your project after you installed and a template has been generated.
-- Then you can open the [docs-common](https://github.com/MohammadAObed/docs-common) repo, then copy paste each content of mostly all files to your project.
+- Then follow the steps below of installation & copying and pasting.
   > 💡 Before copying code, save the file you will paste into first, so Prettier does its thing and Git changes look clearer.
 - Then check whats different and keep the changes, just double check for any unintended changes like changing the names, copying files of the docs, changing the package-lock etc...
 
 ## Installation Others
 
-- Install an [npm package](https://docusaurus.io/community/resources#search) for search within docs functionality
-- One package that works and offline: `npm install --save @easyops-cn/docusaurus-search-local`
+- Install an [npm package](https://docusaurus.io/community/resources#search) for search within docs functionality, One package that works and offline: `npm install --save @easyops-cn/docusaurus-search-local`
+- Install [docusaurus-plugin-typedoc](https://typedoc-plugin-markdown.org/plugins/docusaurus/quick-start) for generating documentation about the app source code: `npm install typedoc typedoc-plugin-markdown docusaurus-plugin-typedoc --save-dev`
 
 ## Adding/Modifying/Removing Files and folders after install with the template generation
 
@@ -61,7 +81,7 @@ const config: Config = {
     navbar: {
       ~ title: REPO,
       logo: {
-        ~ alt: REPO + " logo",
+        ~ alt: `${REPO} logo`,
         ~ src: "img/logo.png",
       },
       ~ items: [
@@ -98,6 +118,24 @@ const config: Config = {
       {
         hashed: true,
       } satisfies PluginOptions,
+    ],
+  ],
+  + plugins: [
+    [
+      "docusaurus-plugin-typedoc",
+      {
+        entryPoints: ["../src", /* ../any-file-not-under-src.ts, .... */],
+        entryPointStrategy: "expand",
+        tsconfig: "../tsconfig.json",
+        plugin: ["typedoc-plugin-markdown"],
+        out: "docs/app",
+        excludeExternals: true,
+        excludePrivate: true,
+        excludeProtected: true,
+        readme: "none",
+        cleanOutputDir: true,
+        exclude: ["../docs/**"],
+      },
     ],
   ],
 };
@@ -140,6 +178,12 @@ title: Personal Notes
 authors: [obed]
 tags: [notes]
 ---
+
+Notes that might not fit anywhere else.
+
+{/* truncate */}
+
+Here are my personal notes:
 ```
 
 - `authors.yml` - add your own authors - e.g.:
@@ -176,6 +220,30 @@ notes:
   border-top: 1px solid var(--ifm-color-emphasis-200);
   margin-top: 10px;
   padding-top: 10px;
+}
+
+.bottom-divider {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.bottom-placed-1 {
+  position: absolute;
+  bottom: 12px;
+  width: 94%;
+}
+
+.bottom-placed-2 {
+  position: absolute;
+  bottom: 52px;
+  width: 94%;
+}
+
+.bottom-placed-3 {
+  position: absolute;
+  bottom: 92px;
+  width: 94%;
 }
 ```
 
@@ -293,3 +361,9 @@ main {
 
 ~ <Layout title={siteConfig.title} description={siteConfig.tagline}>
 ```
+
+## Generate Code Documentation
+
+- Install [docusaurus-plugin-typedoc](#installation-others)
+- Add the plugin in plugins array in [docusaurus.config.js](#docusaurusconfigjs)
+- Now on npm start, it will generate docs in the folder based on out property value, current: `app/docs`
