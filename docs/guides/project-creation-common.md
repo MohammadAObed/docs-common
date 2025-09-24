@@ -59,6 +59,15 @@ sidebar_position: 1
   - first hit ctrl+shift+p → type `select typescript version` → select the workspace version → again hit ctrl+shift+p → type & click on restart typescript
 - Any ts error you encounter that you think is not correct, just restart typescript by ctrl+shift+p → type & click on `Restart TS Server`
 
+## .gitignore
+
+add this to the .gitignore file:
+
+```.gitignore
+# Docs
+/docs
+```
+
 ## Reference Projects
 
 Below are npm packages to use in your projects the same way you use and install npm packages like lodash, react, expo, etc.., they are helpers to your projects.
