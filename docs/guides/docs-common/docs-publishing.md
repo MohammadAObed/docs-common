@@ -88,18 +88,18 @@ jobs:
 
 To test the project before publishing, execute `yarn build` which will build the project and show any errors if any, so yuo dont wait for github pages to show errors or not figuring out why the deploy not working
 
-## 6. Commit & Push Changes
+## 5. Commit & Push Changes
 
 In your code editor commit & push changes you made from the previous steps, the next step depends on it.
 
-## 5. Change GitHub Repo Settings
+## 6. Change GitHub Repo Settings
 
 - Go into browser into your repo here: `https://<your-username>/<your-repo-name>/`
 - Go to Settings → Pages.
 - Under Build and deployment, choose:
 - Source: Deploy from a branch
 - Branch: `gh-pages`, Folder /
-  > 💡 `gh-pages` option should appear from the previous git push
+  > 💡 If `gh-pages` is not showing, just wait 1 to 2 minutes then refresh the page. The option should appear once you done the [previous steps git push](#5-commit--push-changes), and after the action processing is done (Check the action under page `Actions` tab)
 - Save changes.
 
 ## 7. Access Your Website
