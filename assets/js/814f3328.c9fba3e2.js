@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_common=self.webpackChunkdocs_common||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Personal Notes","permalink":"/docs-common/blog/personal-notes","unlisted":false,"date":"2025-09-05T00:00:00.000Z"}]}')}}]);

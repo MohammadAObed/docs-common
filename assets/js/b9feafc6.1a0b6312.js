@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_common=self.webpackChunkdocs_common||[]).push([[4549],{4349:o=>{o.exports=JSON.parse('{"tags":[{"label":"Notes","permalink":"/docs-common/blog/tags/notes","description":"any in-direct notes to the standard way of docs","count":1}]}')}}]);
