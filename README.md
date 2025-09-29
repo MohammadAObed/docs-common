@@ -1,1 +1,9 @@
-Anyone working on this documentation or any other docs projects, I want it intentionally without jira or using any of the common packages I created, because in the end its just docs, static simple content that needs no scalability. Its for quick documenting, but the important thing is to organize the docs well
+# docs-common
+
+## Your shared programming knowledge hub
+
+Config and setup for the documentation site built with [Docusaurus](https://docusaurus.io).
+
+## 📖 Docs
+
+See the full [documentation](https://mohammadaobed.github.io/docs-common)

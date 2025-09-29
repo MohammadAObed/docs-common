@@ -92,10 +92,11 @@ Open **VS Code** and install the following extensions:
 
 #### **AI & Copilot**
 
-- **GitHub Copilot** (`github.copilot`)
-- **GitHub Copilot Chat** (`github.copilot-chat`)
+- **Codex** (`openai.chatgpt`)
 - **Intellicode** (`visualstudioexptteam.vscodeintellicode`)
 - **Intellicode API Usage Examples** (`visualstudioexptteam.intellicode-api-usage-examples`)
+- **GitHub Copilot** (`github.copilot`)
+- **GitHub Copilot Chat** (`github.copilot-chat`)
 
 ## Install Android Emulator (For Mobile Development)
 

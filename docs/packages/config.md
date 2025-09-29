@@ -4,4 +4,4 @@ sidebar_position: 1
 
 # config
 
-You can find it [here](https://mo-docs-config.netlify.app/).
+You can find it [here](https://mohammadaobed.github.io/docs-config).

@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Docs Creation
 
+:::note
+
+Anyone working on any documentation projects, It's intentional to have no jira or using any of the common packages I created, because in the end its just docs, static simple content that needs no scalability. Its for quick documenting, but the important thing is to organize the docs well
+
+:::
+
 ## Create GitHub Repo
 
 - Follow the [clone repo step](../project-creation-common.md#clone-the-repository-in-vs-code-using-git-bash) & [connect repo](../project-creation-common.md#connect-your-github-repository)
@@ -40,6 +46,20 @@ Follow the installation instructions only in the official [docusaurus](https://d
 - Install an [npm package](https://docusaurus.io/community/resources#search) for search within docs functionality, One package that works and offline: `npm install --save @easyops-cn/docusaurus-search-local`
 - Install [docusaurus-plugin-typedoc](https://typedoc-plugin-markdown.org/plugins/docusaurus/quick-start) for generating documentation about the app source code: `npm install typedoc typedoc-plugin-markdown docusaurus-plugin-typedoc --save-dev`
 
+## README.md
+
+Add to `README.md` this content below:
+
+```md
+# <repo-name>
+
+Config and setup for the documentation site built with [Docusaurus](https://docusaurus.io).
+
+## 📖 Docs
+
+See the full [documentation](https://<your-username>.github.io/<your-repo-name>/)
+```
+
 ## Adding/Modifying/Removing Files and folders after install with the template generation
 
 ### docusaurus.config.js
@@ -53,7 +73,7 @@ Follow the installation instructions only in the official [docusaurus](https://d
 
 + const ORG = "MohammadAObed"; //github org/user name
 + const REPO = "docs-common"; //github repo name
-+ const SITE_URL = "https://[your-docs]"; //Site that will host the docs
++ const SITE_URL = `https://${ORG}.github.io`; //Site that will host the docs
 + const GITHUB_URL = `https://github.com/${ORG}/config`;
 
 const config: Config = {
