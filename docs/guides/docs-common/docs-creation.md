@@ -13,20 +13,18 @@ Anyone working on any documentation projects, It's intentional to have no jira o
 ## Create GitHub Repo
 
 - Follow the [clone repo step](../project-creation-common.md#clone-the-repository-in-vs-code-using-git-bash) & [connect repo](../project-creation-common.md#connect-your-github-repository)
-- But when cloning the repo, name the folder: `docs`, and you should clone the repo inside the project folder you are writing the documentation for
+- But when cloning the repo there is some guidlines:
+  - Name the folder: `docs-<name-of-project>`,
+  - Clone the repo beside the project folder
 
 :::info
 
 Cloning the repo inside the project you are writing the documentation for has many advantages:
 
-- Having the docs in your project folder is easier to work with
+- Having the docs beside your project folder is easier to work with
 - So you can generate [code documentation](#generate-code-documentation) with no effort
 
 :::
-
-- Just make sure you use the [config package](https://mo-docs-config.netlify.app) or:
-  - have `"exclude": ["docs"]` in your tsconfig
-  - have `ignores: ["docs", "docs/**"],` in your eslint.config
 
 ## Installation
 
@@ -61,6 +59,9 @@ See the full [documentation](https://<your-username>.github.io/<your-repo-name>/
 ```
 
 ## Adding/Modifying/Removing Files and folders after install with the template generation
+
+- Remove guiding comments
+- review lines where you need to put your own data
 
 ### docusaurus.config.js
 
@@ -144,9 +145,9 @@ const config: Config = {
     [
       "docusaurus-plugin-typedoc",
       {
-        entryPoints: ["../src", /* ../any-file-not-under-src.ts, .... */],
+        entryPoints: ["../<name-of-project-folder>/src", /* and-any-file-not-under-src-if-you-want */],
         entryPointStrategy: "expand",
-        tsconfig: "../tsconfig.json",
+        tsconfig: "../<name-of-project-folder>/tsconfig.json",
         plugin: ["typedoc-plugin-markdown"],
         out: "docs/app",
         cleanOutputDir: false,
@@ -154,7 +155,6 @@ const config: Config = {
         excludePrivate: true,
         excludeProtected: true,
         readme: "none",
-        exclude: ["../docs/**"],
       },
     ],
   ],
